@@ -4,7 +4,8 @@ import styled from 'styled-components';
 const Login = () => {
     return (
         <LoginStyle>
-            Login
+        
+            
         </LoginStyle>
     )
 }
@@ -13,8 +14,6 @@ const Login = () => {
 export default Login;
 
 const LoginStyle = styled.div`
-    
-
     ::after {    
         content: "";
         background-image: url("/thankful.jpg");
@@ -28,6 +27,17 @@ const LoginStyle = styled.div`
         bottom: 0px;
         left: 0px;
         opacity: 0.50;
-        background-position: center, center;
-`;
+        
+    }
+    @media only screen and (max-width: 600px) {
+        ::after {
+            background-position: left -100px center;
+        }
+      }
+`
+    
+;
 
+const LoginBoxStyle = styled.div`
+
+`
