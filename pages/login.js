@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container'
+import Container from 'react-bootstrap/Container';
+import Link from 'next/link'
 import { useState } from 'react'
 
 const Login = () => {
@@ -40,8 +41,10 @@ const Login = () => {
                 <Form.Group controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
-                <Button variant="dark" type="submit">
-                    Submit
+                <Button variant="dark">
+                    <Link href="/">
+                        <a>Login</a>
+                    </Link>
                 </Button>
                 </Form>
                 </Container>
@@ -77,11 +80,16 @@ const LoginStyle = styled.div`
             width: 100% !important
         }
       }
+
+    a {
+        color: white
+    }
 `;
 
 const loginBoxStyle = {
     backgroundColor: "white",
     opacity: 0.8,
     marginTop: "15%",
-    width: "50%"
+    width: "50%",
+    padding: "1rem"
 }
