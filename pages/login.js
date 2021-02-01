@@ -13,7 +13,7 @@ const Login = () => {
 
     return (
         <LoginStyle>
-            <Container className="w-50 p-3" style={loginBoxStyle}>
+            <Container style={loginBoxStyle}>
             <Form>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -72,14 +72,16 @@ const LoginStyle = styled.div`
     @media only screen and (max-width: 600px) {
         ::after {
             background-position: left -100px center;
+        },
+        .container {
+            width: 100% !important
         }
       }
-`
-    
-;
+`;
 
 const loginBoxStyle = {
     backgroundColor: "white",
     opacity: 0.8,
-    marginTop: "15vh"
+    marginTop: "15%",
+    width: "50%"
 }
