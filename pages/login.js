@@ -2,10 +2,13 @@ import styled from 'styled-components';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container'
+import { useState } from 'react'
 
 const Login = () => {
 
-    
+    const [user, setUser] = useState("");
+    const [password, setPassword] = useState("");
+
 
 
     return (
@@ -14,7 +17,12 @@ const Login = () => {
             <Form>
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control 
+                        type="email" 
+                        placeholder="Enter email" 
+                        name="user"
+                        onChange={(e) => {setUser(e.target.value)}}
+                        value={user}/>
                     <Form.Text className="text-muted">
                     We'll never share your email with anyone else.
                     </Form.Text>
@@ -22,7 +30,12 @@ const Login = () => {
 
                 <Form.Group controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control 
+                        type="password" 
+                        placeholder="Password" 
+                        name="password" 
+                        onChange={(e) => {setPassword(e.target.value)}}
+                        value={password}/>
                 </Form.Group>
                 <Form.Group controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
